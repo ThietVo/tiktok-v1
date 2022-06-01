@@ -1,0 +1,58 @@
+@import '../../scss/variable';
+@import '../../scss/mixin';
+
+.headerSearch {
+        
+    &Form {
+        display: flex;
+        align-items: center;
+        padding: 9px 16px;
+        background: rgba(22, 24, 35, 0.06);
+        border-radius: 92px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &Input {
+        width: 292px;
+        border: none;
+        background: transparent;
+        font-size: 1.6rem;
+        padding: 0;
+        font-weight: 400;
+        caret-color: $dark-red;
+        appearance: textfield;
+
+        @include tablet {
+            width: 250px;
+        }
+    }
+
+    &Btn {
+        padding: 13px 16px;
+        margin: -12px -16px;
+        border: none;
+        background: transparent;
+
+    }
+
+    &Btn:hover {
+        background: rgba(22, 24, 35, 0.04);
+    }
+
+    &Icon {
+        font-size: 2.2rem;
+        color: #a7a7ab;
+    }
+
+    &Delete {
+        margin: 0 16px;
+    }
+
+    &Spliter {
+        width: 1px;
+        height: 28px;
+        margin-right: 16px;
+        background: rgba(22, 24, 35, 0.12);
+    }
+}

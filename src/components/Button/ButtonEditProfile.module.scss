@@ -1,0 +1,21 @@
+@import '../../scss/variable';
+@import '../../scss/mixin';
+
+.btnEdit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 180px;
+    @include textStyle(1.6rem, $black-color, 700);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 4px;
+    background: #fff;
+    &Icon {
+        font-size: 2rem;
+        margin-right: 10px;
+    }
+}
+.btnEdit:hover {
+    background: rgb(250, 248, 248);
+}

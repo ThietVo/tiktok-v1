@@ -1,0 +1,78 @@
+@import '../../scss/variable';
+@import '../../scss/animation';
+@import '../../scss/mixin';
+
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &Btn {
+        height: 36px;
+        background: $dark-red;
+    }
+}
+
+.upload {
+    @include textStyle(1.6rem, $black-color, 700);
+    margin-right: 16px;
+}
+
+.upload:hover {
+    text-decoration: underline;
+}
+
+.seeMore {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 0 10px;
+    margin-left: 16px;
+    cursor: pointer;
+    position: relative;
+
+    &Icon {
+        font-size: 1.6rem;
+    }
+
+    &List {
+        width: 230px;
+        padding: 10px 0;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(22, 24, 35, 0.22);
+        @include textStyle(1.6rem, $black-color, 600);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 14px);
+        right: -10px;
+        z-index: 9999;
+        border-radius: 4px;
+        display: none;
+
+        &Item {
+            padding: 10px 12px;
+        }
+
+        &Item:hover {
+            background: rgba(22, 24, 35, 0.04);
+        }
+    }
+
+    &List::before {
+        content: "";
+        display: block;
+        border: 12px solid;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        top: -24px;
+        right: 14px;
+    }
+}
+
+.seeMore:hover {
+    .seeMoreList{
+        display: flex;
+        animation: fadeIn linear 0.5s;
+    }
+}

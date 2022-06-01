@@ -1,0 +1,11 @@
+@import '../../scss/variable';
+@import '../../scss/mixin';
+
+video {
+    background: rgb(114, 113, 113);
+    display: block;
+    height: 100%;
+    width: 450px;
+    margin: auto;
+    // object-fit: cover;
+}

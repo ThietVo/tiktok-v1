@@ -1,0 +1,26 @@
+@import '../../scss/variable';
+@import '../../scss/mixin';
+
+
+.mobileHeader {
+    display: none;
+
+    @include mobile {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    &List {
+        @include textStyle(1.7rem, #fff, 700);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 32px;
+        &Item {
+            margin-right: 16px;
+        }
+    }
+}

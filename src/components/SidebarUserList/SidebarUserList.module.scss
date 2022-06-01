@@ -1,0 +1,49 @@
+@import '../../scss/mixin';
+@import '../../scss/variable';
+
+.userList {
+    width: 100%;
+    padding: 16px 0;
+    position: relative;
+    &Header {
+        @include textStyle(1.4rem, $gray, 600);
+        padding: 0 8px;
+        margin-bottom: 8px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &Action {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &SeeAll {
+        padding: 0 8px;
+        margin-top: 12px;
+        @include textStyle(1.4rem, $dark-red, 600);
+        cursor: pointer;
+    }
+}
+
+.userList::before {
+    @include horizontalLine();
+}
+
+.tabletUserListAction {
+    display: none;
+
+    padding: 8px 15px 8px 8px;
+    width: 100%;
+    font-size: 2.4rem;
+    text-align: center;
+    cursor: pointer;
+    color: rgba(22, 24, 35, 0.5);
+
+    @include tablet {
+        display: block;
+    }
+}

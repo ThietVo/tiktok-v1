@@ -1,0 +1,7 @@
+@import '../../scss/variable';
+@import '../../scss/mixin';
+
+.notification {
+    @include textStyle(2.5rem, $black-color, 700);
+    margin-right: 16px;
+}

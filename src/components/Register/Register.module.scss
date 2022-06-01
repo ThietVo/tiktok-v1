@@ -1,0 +1,57 @@
+@import '../../scss/variable';
+@import '../../scss/mixin';
+
+.modalInnerForm {
+    &Group + &Group{
+      margin-top: 20px;
+    }
+    &Input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #e0dddd;
+      @include textStyle(1.8rem, $black-color, 400);
+    }
+
+    &Control {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 40px;
+    }
+    &BtnRegister {
+      height: 36px;
+      color: #fff;
+      background: $dark-red;
+      margin-left: 10px;
+    }
+    &BtnClose {
+      height: 36px;
+      color: $dark-red;
+      background: #fff;
+      border: 1px solid $dark-red;
+    }
+  }
+
+.loginFail {
+  display: flex;
+  margin: 12px 0;
+  &Icon {
+    @include textStyle(1.4rem, #dc3545, 400);
+    margin-right: 8px;
+  }
+  &Text {
+    @include textStyle(1.4rem, #dc3545, 400)
+  }
+}
+
+.alertError {
+  @include textStyle(1.4rem, #dc3545, 400);
+  margin: 8px 0 12px;
+}
+
+.btnDisable {
+  color: rgba(22,24,35,0.34);
+  background: rgb(242, 242, 242);
+  border: 1px solid rgb(242, 242, 242);
+  pointer-events: none;
+}
